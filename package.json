@@ -5,13 +5,18 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/server.js",
-    "start:dev": "nodemon src/server.js"
+    "start:dev": "nodemon src/server.js",
+    "migration": "npx knex migrate:latest",
+    "rollback": "npx knex migrate:rollback"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
+    "knex": "^2.3.0",
+    "pg": "^8.8.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
